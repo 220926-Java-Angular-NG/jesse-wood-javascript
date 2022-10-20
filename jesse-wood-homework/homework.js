@@ -25,21 +25,22 @@ submitButton.addEventListener('click', (event) => {
     if (id && username && pClass && level) {
         console.log('true')
         var row = document.createElement('tr');
-        tableBody.append(row);
+        tableBody.appendChild(row);
+
         var idCell = document.createElement('td');
-        idCell.value = id;
-        row.append(idCell);
+        idCell.innerHTML = id;
+        row.appendChild(idCell);
 
         var nameCell = document.createElement('td');
-        nameCell.value = username;
-        row.append(nameCell);
+        nameCell.innerHTML = username;
+        row.appendChild(nameCell);
 
         var classCell = document.createElement('td');
-        classCell.value = pClass;
-        row.append(classCell);
+        classCell.innerHTML = pClass;
+        row.appendChild(classCell);
 
         var levelCell = document.createElement('td');
-        levelCell.value = level;
-        row.append(levelCell);
+        levelCell.innerHTML = level;
+        row.appendChild(levelCell);
     }
 })
